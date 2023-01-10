@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="styles.css" rel="stylesheet" />
+<title>Website Project</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script>
+$(document).ready(function() {
+    $("#clock").slideDown(2000);
+
+    $('nav div a').click(function(e) {
+		e.preventDefault();
+		var target = $( $(this).attr('href') ).offset().top; 
+		$('html,body').stop().animate({ 
+			scrollTop: target-80 
+		},{ 
+			duration: 1000 
+		});
+	});
+    
+    var bounceCounter = 0; 
+    var slideCounter = 0; 
+    $(window).scroll(function() {
+        if($(window).scrollTop() > 500) {
+            $("#subsection-two-p1").fadeTo(2000, 1, function(){
+                if (bounceCounter === 0) {
+                    $("ol").effect("bounce", {direction: "down", distance:40, times: 5}, 2000, function(){
+                        $("#subsection-two-p2").fadeTo(2000, 1, function(){
+                            $("#person-working-out").slideDown(1000);
+                            $("#img2source").slideDown(1000);
+                        });
+                    });
+                }
+                bounceCounter = bounceCounter + 1;
+             });
+		}
+        if($(window).scrollTop() > 1000) {
+            $("#subsection-three-p1").fadeTo(3000, 1);
+            $("#subsection-three-p2").fadeTo(3000, 1);
+            $("#subsection-three-p3").fadeTo(3000, 1);
+        }
+        if($(window).scrollTop() > 1600) {
+            if (slideCounter === 0) {
+                $("#subsection-six-p1").effect("slide", { direction: "left"}, 3000, function(){
+                    $("#subsection-six-p2").effect("slide", { direction: "right"}, 2000, function(){
+                        $("#subsection-six-p3").effect("slide", { direction: "left"}, 1000);
+                    });
+                });
+            }
+            slideCounter = slideCounter + 1;
+        } 
+	});
+
+    $("#number-four").click(function(){
+        $("#img4").css('opacity', '1');
+        $("#number-four").css('background-color', '#48B3AF');
+        $("#number-four").css('color', 'white');
+        
+        $("#img4").mouseenter(function(){
+            $("#img4source").css('opacity', '1');
+        });
+
+        $("#img5").css('opacity', '1');
+
+        $("#img5").mouseenter(function(){
+            $("#img5source").css('opacity', '1');
+        });
+    });
+
+    $("#number-five").click(function(){
+        $("#img3").css('opacity', '1');
+        $("#number-five").css('background-color', '#48B3AF');
+        $("#number-five").css('color', 'white');
+
+        $("#img3").mouseenter(function(){
+            $("#img3source").css('opacity', '1');
+        });
+    });
+
+    $("#subsection-five-p2").click(function(){
+        $("iframe").fadeTo(3000, 1);
+    });
+});
+</script>
+</head>
+
+<body>
+    <nav>
+        <a href="#" class="logo"><span class="letter">M</span>ind<span class="letter">M</span>otivation</a>
+        <div class="nav-items">
+            <a id="time" href="body">Time ⌛</a>
+            <a id="excuses" href="h2">Excuses</a>
+            <a id="mental" href="h3">Mental+</a>
+            <a id="physical" href="h4">Physical+</a>
+            <a id="takeaway" href="#conclusion">The takeaway ✓</a>
+        </div>
+    </nav>
+
+    <section id="intro-container">
+        <h1>IT'S ABOUT TIME...</h1>
+        
+        <figure id="clock">
+            <img id="img1" src="./images/Clock.gif" alt="Clock GIF">
+            <a target=”_blank” class="source" href="https://commons.wikimedia.org/wiki/File:Clock.gif">Source: commons.wikimedia.org</a>
+        </figure>
+        
+        <section id="p1" class="intro">
+            <p id="para1">It is common for us as human beings to say there is no time to do this and that. To say that we are working today, have to run errands tomorrow, and already made plans for next Saturday. Do you ever stop to think about how much time it is that you have in a day, and how efficiently you can use such small portions of it to your advantage?</p>
+        </section>
+
+        <section id="p2" class="intro">
+            <p id="para2">After reading that, most likely your answer is no - I know for sure that is what mine would be if I was given this exact question out of the blue. It may sound trivial; however, it really gets us to put time into perspective. This is because we usually get so caught up with daily matters such as work, university, or school, causing us to largely neglect and forget to make time for important aspects of our lives, with a vital one being our health.</p>
+        </section>
+
+        <section id="p3" class="intro">
+            <p id="para3">Now I’m not an expert who has a master’s degree in ‘Health Science’. I’m just an ordinary person who happened to have done enough research with the aim of sharing key insights on what objectively plays a significant role in our lives. I find it extremely necessary to put forward the changes that can be made in order to create a positive impact on individuals’ mental and physical states via exercise, changes that would hold great value in today’s social climate.</p>
+        </section>
+
+        <section id="p4" class="intro">
+            <p id="para4">The twenty first century has welcomed the idea of looking at various scientific approaches to using exercise as medicine, with experts in the fields of exercise and health emphasising that the benefits of exercise are, without a doubt, real and effective.</p>
+        </section>
+    </section>
+
+    <section id="main">
+        <section id="subsection-one">
+            <a style="display:none" id="img2source" class="source" target=”_blank” href="https://unsplash.com/@sammywilliams?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Source: Photo by Sander Sammy on Unsplash</a>
+            <figure style="display:none" id="person-working-out">
+                <img id="img2" src="./images/sander-sammy-7vABBrkzzlk-unsplash.png" alt="Frustrated Person Working Out">
+            </figure>
+        </section>
+        
+        <section class="subsection" id="subsection-two">
+            <h2>What's your excuse?</h2>
+            <p id="subsection-two-p1" style="opacity:0">Below I have examples of commonly used excuses when it comes to reasons for lack of exercise:</p>
+                <ol style="display:none">
+                    <li>I’m too <span>tired</span> to exercise</li>
+                    <li>I don’t have <span>time</span></li>
+                    <li>I can’t find the <span>motivation</span></li>
+                    <li>I have no interest in <span>exercising alone</span></li>
+                    <li>I’m easily <span>bored</span> by the idea of it</li>
+                </ol>
+               <p id="subsection-two-p2" style="opacity:0">While some excuses may be genuine, a few potentially indicate an extent of laziness, a quality we are all guilty of portraying now more than ever before as we are constantly surrounded and absorbed by technology. Our dependence on it to do tasks that previously could have been done ourselves has undoubtedly hindered our ability to commit to even the smallest of physical activities. Below, I will refer to and offer ways around the excuses stated above and outline the many mental and physical benefits exercising can induce.</p>
+        </section>
+
+        <section class="subsection" id="subsection-three">
+            <h3>Happy <u>Mind</u>, Happy Life</h3>
+            <p style="opacity:0" id="subsection-three-p1">Mental benefits. Before making any conclusions to whether you will exercise or not, it is important to consider the broad variety of positive psychological effects as a result of exercising.</p>
+            <p style="opacity:0" id="subsection-three-p2">As stated in point <span id="number-five" class="number">no. 5</span>, boredom has the ability to discourage exercise very easily which is indeed true and is why it is important to commit to exercises that you are interested in, whether it be yoga, biking, playing sports for a team or even dancing. Especially when you do something you enjoy exercise is scientifically proven to be a mood booster, causing symptoms of both depression and anxiety - two very prevalent mental health disorders in today’s society, to significantly decrease.</p>
+            <p style="opacity:0" id="subsection-three-p3">In reference to reason <span id="number-four" class="number">no. 4</span>, it’s clear some people tend to work better with others, and that’s great. All it takes is to ask a friend and interest them in joining you for a session at the gym or even something simple like a walk or jog for ten to twenty minutes. Something as simple as this really holds a lot of usefulness in decreasing any stress built up under work and school conditions and not only benefits you, but your friend’s mental state also.</p>
+        </section>
+
+        <section class="subsection" id="subsection-four">
+            <div id="sports-images">
+                <div style="width:300px; font-size:80%; text-align:center;">
+                    <img id="img3" style="opacity:0;" src="./images/jonas-vandermeiren-7pclvpuAywI-unsplash.jpg" alt="Person on bike">
+                    <a style="opacity:0" id="img3source" class="source" target=”_blank” href="https://unsplash.com/@jonasvandermeiren?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Source: Photo by Jonas Vandermeiren on Unsplash</a>      
+                </div>
+                <div id="group-images">
+                    <div style="width:300px; font-size:80%; text-align:center;">
+                        <img id="img4" style="opacity:0" src="./images/tim-mossholder-8BDsISuooUQ-unsplash.jpg" alt="People playing basketball">
+                        <a style="opacity:0" id="img4source" class="source" target=”_blank” href="https://unsplash.com/@timmossholder?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Source: Photo by Tim Mossholder on Unsplash</a>
+                    </div>
+                    <div style="width:300px; font-size:80%; text-align:center;">
+                        <img id="img5" style="opacity:0" src="./images/gabin-vallet-J154nEkpzlQ-unsplash.jpg" alt="People running">
+                        <a style="opacity:0" id="img5source" class="source" target=”_blank” href="https://unsplash.com/@gabinvallet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Source: Photo by Gabin Vallet on Unsplash</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="subsection" id="subsection-five">
+            <p id="subsection-five-p1">Want some motivation?</p>
+            <p id="subsection-five-p2">Click here!</p>
+            <iframe style="opacity:0" src="https://www.youtube.com/embed/-JMAgzKvlIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        
+        <section class="subsection" id="subsection-six">
+            <h4>Exercise... or Extra Fries?</h4>
+            <p id="subsection-six-p1" style="display:none">Physical benefits. People have a habit of limiting their capabilities, preventing themselves from pursuing various forms of exercise. Reason number one is a prime example, demonstrating how sometimes people limit their physical capabilities in saying that they are tired when in reality they still have gas in the tank, and the process of exercise will only energise the body more! While the result of exercise may make you out of breath and your muscles sore, those are significant indicators of hard work implying improvement in cardiovascular endurance and stimulation of muscle building has been achieved.</p>
+            <p id="subsection-six-p2" style="display:none">Many of us balance a lot of commitments on our hands; as stated above in reason number two, time is one of many factors prompting lack of exercise. When facing such circumstances, our aim is to make time for exercise instead of trying to find time. There is often a misconception that only long exercise routines show results and considering that for many of us lack of time is the main reason for not exercising, it is important to note that a study comparing a ten-minute, high intensity workout with a fifty-minute workout proved that both had resulted in identical improvements regarding heart function and blood sugar control even though one was five times the duration of the other. It might sound like nothing but implementing a small ten minute routine and following it consistently is essential to maintaining a healthy body as well as reducing the risk of chronic diseases.</p>
+            <p id="subsection-six-p3" style="display:none">While for some of us time might not be an issue, finding motivation definitely is. If this is what’s stopping you from committing to exercise, the first step is to set fitness goals and rewards for meeting those goals as a way to treat yourself. Setting small goals is heavily beneficial especially once results start to be seen. Something you previously treated as a chore would soon become a hobby and before you know it, you’ll be looking like Arnold Schwarzenegger 💪.</p>
+        </section>
+    </section>
+
+    <section id="conclusion">
+        <h5>THE TAKEAWAY</h5>
+        <div id="conclusion-container">
+            <div style="font-size:80%; text-align:center; width:300px;">
+                <img id="img6" src="./images/personrunning.png" alt="Man running">
+                <a id="img6source" class="source" target=”_blank” href="https://www.pngwing.com/en/free-png-zbvjp">Source: pngwing.com</a>
+            </div>
+            <div id="takeaway-info">
+                <p>Obviously, it’s difficult to uphold regular exercise, but what I aimed to convey is the notion that we should reconsider our reasons for not committing to exercise and ask ourselves simple questions like, “Can I make some time for ten to fifteen minutes of exercise today?” instead of reverting to, “I can’t find any time for exercise”.</p>
+                <p>I myself, am not perfect, I fall victim to the same excuses sometimes and do not always commit to a consistent level of exercise. Whether I do the minimum or maximum amount of exercise on some days isn’t what matters to me. What counts the most is that I brought myself to do it, challenged myself mentally and physically, and most importantly benefited my health, both in the short and long term. Hopefully, you can take some inspiration from this information and incorporate it into your lifestyle. If this is already you, keep up the great work! 👊</p>
+            </div>
+            <div style="font-size:80%; text-align:center; width:250px;">
+                <img id="img7" src="./images/destination.png" alt="Destination Symbol">
+                <a id="img7source" class="source" target=”_blank” href="https://pngtree.com/abuhenaashik_27941530?type=1">Source: Image by abuhenaashik on pngtree.com</a>
+            </div>
+        </div>
+        <h6>By Maxim Sugak</h6>
+    </section>
+</body>
+</html>

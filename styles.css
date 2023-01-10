@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Outfit:wght@500&family=Permanent+Marker&family=Sarabun&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+nav {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: #3b3b3b;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+nav .nav-items {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .nav-items a {
+    font-size: 26px;
+    text-decoration: none;
+    border: solid 2px #20A39E;
+    margin: 0 20px;
+    padding: 0 10px;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+nav .nav-items a:hover {
+    background-color: #20A39E;
+}
+
+nav .logo {
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: 'Permanent Marker', cursive;
+    margin-right: 75px;
+    cursor: default;
+}
+
+.letter {
+    color: #20A39E;
+    font-family: 'Permanent Marker', cursive;
+}
+
+span {
+    color: #ffffff;
+}
+
+.number {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    padding: 2px;
+    border-radius: 2%;
+}
+
+.number:hover {
+    background-color: #48B3AF;
+    color: white;
+}
+
+body {
+    background-color: #000000b6;
+    padding-top: 98px;
+}
+
+#intro-container {
+    background-color: #ffffff;
+    padding: 2%;
+}
+
+.intro {
+    border: solid 3px rgba(72, 179, 175, 0.8);
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-bottom: 1%;
+    font-size: 20px;
+    margin-top: 2%;
+    letter-spacing: 0.5px;
+}
+
+#p1 {
+    margin-left: 15%;
+    width: 55%;
+    box-shadow: rgba(72, 179, 175, 0.4) -5px 5px, rgba(72, 179, 175, 0.3) -10px 10px, rgba(72, 179, 175, 0.2) -15px 15px, rgba(72, 179, 175, 0.1) -20px 20px, rgba(72, 179, 175, 0.05) -25px 25px;
+}
+
+#p2 {
+    box-shadow: rgba(72, 179, 175, 0.4) 5px 5px, rgba(72, 179, 175, 0.3) 10px 10px, rgba(72, 179, 175, 0.2) 15px 15px, rgba(72, 179, 175, 0.1) 20px 20px, rgba(72, 179, 175, 0.05) 25px 25px;
+    margin-left: 30%;
+    width: 55%;
+}
+
+#p3 {
+    box-shadow: rgba(72, 179, 175, 0.4) -5px 5px, rgba(72, 179, 175, 0.3) -10px 10px, rgba(72, 179, 175, 0.2) -15px 15px, rgba(72, 179, 175, 0.1) -20px 20px, rgba(72, 179, 175, 0.05) -25px 25px;
+    margin-left: 15%;
+    width: 55%;
+}
+
+#p4 {
+    box-shadow: rgba(72, 179, 175, 0.4) 5px 5px, rgba(72, 179, 175, 0.3) 10px 10px, rgba(72, 179, 175, 0.2) 15px 15px, rgba(72, 179, 175, 0.1) 20px 20px, rgba(72, 179, 175, 0.05) 25px 25px;
+    margin-left: 30%;
+    width: 55%;
+}
+
+p::before {
+    content: "\a";
+    white-space: pre;
+}
+
+#subsection-five-p2::before {
+    content: none;
+    white-space: none;
+}
+
+#para1 {
+    font-weight: bolder;
+}
+
+h1 {
+    font-size: 32px;
+    font-family: 'Outfit', sans-serif;
+}
+
+h2 {
+    padding-top: 2%;
+    font-size: 32px;
+    font-family: 'Outfit', sans-serif;
+}
+
+h3 {
+    padding-top: 4%;
+    font-size: 32px;
+    font-family: 'Outfit', sans-serif;
+}
+
+h4 {
+    padding-top: 4%;
+    font-size: 32px;
+    font-family: 'Outfit', sans-serif;
+}
+
+h5 {
+    text-align: center;
+    padding-top: 5%;
+    font-size: 32px;
+    font-family: 'Outfit', sans-serif;
+}
+
+h6 {
+    padding-top: 3%;
+    padding-left: 2%;
+    font-size: 28px;
+    text-decoration: underline;
+    font-family: 'Outfit', sans-serif;
+}
+
+u {
+    font-family: 'Outfit', sans-serif;
+}
+
+#clock {
+    float: right;
+    width: 10%;
+    display: none;
+}
+
+.source:link {
+    color: black;
+}
+
+.source:visited {
+    color: black;
+}
+
+
+#img1 {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+#sports-images {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    place-items:  center;
+}
+
+#group-images {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#img3, #img4, #img5 {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: solid 4px white;
+    transition: 0.4s;
+}
+
+iframe {
+    display: block;
+    width: 90%;
+    height: 450px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+#img3:hover, #img4:hover, #img5:hover {
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px rgba(68, 77, 136, 0.3);
+}
+
+#person-working-out {
+    margin-top: 7%;
+}
+
+#main {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-auto-rows: minmax(300px, auto);
+    grid-template-columns: 50% 50%;
+    letter-spacing: 0.5px;
+}
+
+#subsection-one {
+    background-color: #71C4C1;
+}
+
+#subsection-two {
+    background-color: #48B3AF;
+}
+
+.subsection {
+    font-size: 20px;
+    padding-right: 6%;
+    padding-left: 6%;
+    padding-bottom: 3%;
+    /* border-bottom: solid 5px white; */
+}
+
+li {
+    margin-top: 2.5%;
+}
+
+ol {
+    margin-left: 5%;
+}
+
+#subsection-three {
+    background-color: #48B3AF;
+}
+
+
+#subsection-four {
+    background-color: #71C4C1;
+    padding-top: 3%;
+}
+
+#subsection-five {
+    background-color: #71C4C1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+}
+
+#subsection-five-p1 {
+    font-size: 32px;
+    font-family: 'Outfit', sans-serif;
+}
+
+#subsection-five-p2 {
+    text-transform: uppercase;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#subsection-six {
+    background-color: #48B3AF;
+}
+
+#conclusion {
+    background-color: white;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    padding-bottom: 2%;
+    border-right: 10px solid #48B3AF;
+    border-left: 10px solid #71C4C1;
+}
+
+#conclusion-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    place-items:  center;
+}
+
+#takeaway-info {
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-bottom: 1%;
+    margin-top: 2%;
+}
+
+#img6 {
+    max-width: 300px;
+    height: auto;
+}
+
+#img7 {
+    max-width: 200px;
+    height: auto;
+}
